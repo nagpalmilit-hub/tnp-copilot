@@ -1,0 +1,239 @@
+.notice-analyzer {
+  width: 100%;
+  min-width: 0;
+  padding: 4px 0 24px;
+  color: #172033;
+}
+
+.notice-analyzer,
+.notice-analyzer * {
+  box-sizing: border-box;
+}
+
+.notice-analyzer-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.notice-analyzer-heading h2 {
+  margin: 7px 0 8px;
+  font-size: clamp(24px, 3vw, 30px);
+  letter-spacing: -0.8px;
+}
+
+.notice-analyzer-heading p,
+.notice-results-heading p {
+  margin: 0;
+  color: #778197;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.notice-demo-badge {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border: 1px solid #dbe5ff;
+  border-radius: 8px;
+  background: #f1f5ff;
+  color: #3855a4;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.notice-analyzer-panel {
+  margin-bottom: 20px;
+  padding: 23px;
+  border: 1px solid #e6eaf1;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 3px 12px rgb(20 35 70 / 3%);
+}
+
+.notice-analyzer-panel > label {
+  display: block;
+  margin: 0 0 8px;
+  color: #536078;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.notice-analyzer-panel > input,
+.notice-analyzer-panel > textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 19px;
+  padding: 12px 13px;
+  border: 1px solid #dfe5ee;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.notice-analyzer-panel > input:focus,
+.notice-analyzer-panel > textarea:focus {
+  border-color: #647fe8;
+  box-shadow: 0 0 0 3px rgb(100 127 232 / 12%);
+}
+
+.notice-analyzer-panel > textarea {
+  min-height: 190px;
+  resize: vertical;
+}
+
+.notice-analyzer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.notice-analyze-button,
+.notice-reset-button {
+  min-height: 42px;
+  padding: 10px 17px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.notice-analyze-button {
+  border: 1px solid #263e96;
+  background: #263e96;
+  color: #fff;
+}
+
+.notice-analyze-button:hover:not(:disabled) {
+  background: #1c307c;
+}
+
+.notice-analyze-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.notice-reset-button {
+  border: 1px solid #dfe5ee;
+  background: #fff;
+  color: #536078;
+}
+
+.notice-reset-button:hover {
+  background: #f7f9fc;
+}
+
+.notice-helper {
+  margin: 14px 0 0;
+  color: #8993a5;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.notice-results-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.notice-results-heading h3 {
+  margin: 0 0 6px;
+  color: #172033;
+  font-size: 17px;
+}
+
+.notice-review-badge,
+.notice-found-badge,
+.notice-field-found,
+.notice-field-missing {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.notice-review-badge,
+.notice-field-missing {
+  background: #fff4e5;
+  color: #9a5a08;
+}
+
+.notice-found-badge,
+.notice-field-found {
+  background: #eaf8ef;
+  color: #21804b;
+}
+
+.notice-criteria-list {
+  display: grid;
+  gap: 10px;
+}
+
+.notice-criteria-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 15px;
+  border: 1px solid #e8ecf2;
+  border-radius: 10px;
+  background: #fbfcfe;
+}
+
+.notice-criteria-item strong {
+  color: #26334b;
+  font-size: 12px;
+}
+
+.notice-criteria-item p {
+  margin: 7px 0 0;
+  color: #657189;
+  font-size: 12px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.notice-review-note {
+  margin-top: 18px;
+  padding: 15px;
+  border: 1px solid #f0dfb4;
+  border-radius: 10px;
+  background: #fffbef;
+}
+
+.notice-review-note strong {
+  color: #8b6415;
+  font-size: 12px;
+}
+
+.notice-review-note p {
+  margin: 7px 0 0;
+  color: #796b4e;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 650px) {
+  .notice-analyzer-heading,
+  .notice-results-heading {
+    flex-direction: column;
+  }
+
+  .notice-analyzer-panel {
+    padding: 17px;
+  }
+
+  .notice-criteria-item {
+    flex-direction: column;
+  }
+}
